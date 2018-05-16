@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
-
+ruby '2.2.4'
 
 gem 'rails', '4.2.8'
-gem 'sqlite3', '1.3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -26,3 +25,6 @@ group :development do
   gem 'spring', '1.6.4'
   gem 'thin', '1.7.0'
 end
+
+# Added at 2018-05-16 17:39:06 +0700 by moka:
+gem "pg", "~> 0.18.1"
