@@ -26,5 +26,3 @@ group :development do
   gem 'thin', '1.7.0'
 end
 
-# Added at 2018-05-16 17:39:06 +0700 by moka:
-gem "pg", "~> 0.18.1"
