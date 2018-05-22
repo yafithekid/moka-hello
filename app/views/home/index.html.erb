@@ -42,6 +42,8 @@
     <li><%= link_to 'Served By', "#{ENV['MOKA_HOST_PROVIDER']}/v2/outlets/#{session[:outlet_ids].first}/reports/server_sales?access_token=#{session[:access_token]}", target: '_blank' %></li>
     <li><%= link_to 'Transactions', "#{ENV['MOKA_HOST_PROVIDER']}/v1/outlets/#{session[:outlet_ids].first}/reports/transactions?access_token=#{session[:access_token]}", target: '_blank' %></li>
     <li><%= link_to 'Get Latests Transactions', "#{ENV['MOKA_HOST_PROVIDER']}/v1/outlets/#{session[:outlet_ids].first}/reports/get_latest_transactions?access_token=#{session[:access_token]}", target: '_blank' %></li>
+    <li><%= link_to 'Invoices', "#{ENV['MOKA_HOST_PROVIDER']}/v2/outlets/#{session[:outlet_ids].first}/reports/invoices?access_token=#{session[:access_token]}", target: '_blank' %></li>
+    <li><%= link_to 'Shifts', "#{ENV['MOKA_HOST_PROVIDER']}/v2/outlets/#{session[:outlet_ids].first}/reports/shifts?access_token=#{session[:access_token]}", target: '_blank' %></li>
   </ul>
   Customers
   <ul>
