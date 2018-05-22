@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
       session[:access_token] = credential.token
       session[:refresh_token] = credential.refresh_token
       session[:expires_at] = credential.expires_at
-      redirect_to "/register", logout: true
+      redirect_to root_path, logout: true
     end
   end
 

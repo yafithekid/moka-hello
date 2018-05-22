@@ -13,27 +13,4 @@ class HomeController < ApplicationController
     session[:expires_at] = new_credential["expires_at"]
     redirect_to return_to.present? ? return_to : root_path
   end
-
-
-  def register
-    @profile = call_profile
-    @business = call_business['data']['business']
-  end
-
-  private
-  def call_profile
-    uri = URI("#{ENV['MOKA_HOST_PROVIDER']}/v1/profile/self")
-    params = {access_token: session[:access_token]}
-    uri.query = URI.encode_www_form(params)
-    res = Net::HTTP.get(uri)
-    JSON.parse(res)
-  end
-
-  def call_business
-    uri = URI("#{ENV['MOKA_HOST_PROVIDER']}/v1/businesses")
-    params = {access_token: session[:access_token]}
-    uri.query = URI.encode_www_form(params)
-    res = Net::HTTP.get(uri)
-    JSON.parse(res)
-  end
 end
